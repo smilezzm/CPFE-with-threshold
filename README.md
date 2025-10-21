@@ -22,7 +22,7 @@ A blank computer with no Python or development tools installed.
    ```
    You should see something like `Python 3.11.x`
 
-   (There is a guid on how to open Command Prompt in Windows: [https://www.163.com/dy/article/JO80DNUR055629UX.html](https://www.163.com/dy/article/JO80DNUR055629UX.html) Almost all the commands below are to be run in Command Prompt or Terminal.)
+   (There is a guid on how to open Command Prompt in Windows: [https://www.163.com/dy/article/JO80DNUR055629UX.html](https://www.163.com/dy/article/JO80DNUR055629UX.html). **Almost all the commands below are to be run in Command Prompt or Terminal.**)
 
 ### Step 2: Install Anaconda (Recommended Alternative)
 
