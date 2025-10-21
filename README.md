@@ -83,6 +83,36 @@ pip install numpy nibabel SimpleITK matplotlib lungmask
 #### Option B: Use Any Text Editor
 You can also use Notepad (Windows), TextEdit (Mac), or any text editor you prefer.
 
+## Script Configuration
+
+Before running, edit the last line of `threshold_lung.py` to specify your input files:
+
+```python
+if __name__ == "__main__":
+    threshold_lung('./your_ct_file.nii.gz', './mask/your_mask_file.nii.gz')
+```
+
+Replace:
+- `'./your_ct_file.nii.gz'` with the path to your CT scan file
+- `'./mask/your_mask_file.nii.gz'` with the desired output path for the lung mask
+
+**Note**: Make sure the `mask` directory exists before running, or create it:
+```bash
+mkdir mask
+```
+
+### Custom LAA and HAA Bounds
+
+You can also customize the LAA and HAA thresholds:
+
+```python
+threshold_lung('./your_ct_file.nii.gz', 
+               './mask/your_mask_file.nii.gz',
+               LAA_bound=[-1024, -950],  # Default LAA range
+               HAA_bound=[-700, -200])   # Default HAA range
+```
+
+
 ## Running the Script
 
 ### Method 1: Using Command Line
@@ -118,34 +148,6 @@ You can also use Notepad (Windows), TextEdit (Mac), or any text editor you prefe
    - Choose the virtual environment you created
 5. Press F5 or click the "Run" button to execute the script
 
-## Script Configuration
-
-Before running, edit the last line of `threshold_lung.py` to specify your input files:
-
-```python
-if __name__ == "__main__":
-    threshold_lung('./your_ct_file.nii.gz', './mask/your_mask_file.nii.gz')
-```
-
-Replace:
-- `'./your_ct_file.nii.gz'` with the path to your CT scan file
-- `'./mask/your_mask_file.nii.gz'` with the desired output path for the lung mask
-
-**Note**: Make sure the `mask` directory exists before running, or create it:
-```bash
-mkdir mask
-```
-
-### Custom LAA and HAA Bounds
-
-You can also customize the LAA and HAA thresholds:
-
-```python
-threshold_lung('./your_ct_file.nii.gz', 
-               './mask/your_mask_file.nii.gz',
-               LAA_bound=[-1024, -950],  # Default LAA range
-               HAA_bound=[-700, -200])   # Default HAA range
-```
 
 ## Output
 
